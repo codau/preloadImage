@@ -16,7 +16,7 @@ Template.hello.created = function() {
 ```
 Template.hello.helpers({
   imageSrc: function () {
-    return Template.instance().image.load();
+    return Template.instance().image.get();
   }
 });
 ```
