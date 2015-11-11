@@ -8,8 +8,10 @@ This package is designed to remove the annoying blink between images, when you c
 ### Blaze:
 
 ```
+
 Template.hello.created = function() {
-  this.image = new PreloadImage('source');
+  var src = 'foo.png';
+  this.image = new PreloadImage(src);
 };
 ```
 
@@ -24,7 +26,8 @@ Template.hello.helpers({
 ```
 Template.hello.events({
   'click button': function () {
-    Template.instance().image.set(`new source`);
+    var src = 'bar.png';
+    Template.instance().image.set(src);
   }
 });
 ```
