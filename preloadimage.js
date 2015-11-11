@@ -1,4 +1,4 @@
-preloadImage = class {
+PreloadImage = class PreloadImage {
   constructor(src) {
     this.url = new ReactiveVar();
     this.url.set(src);
@@ -7,7 +7,7 @@ preloadImage = class {
   set(src) {
     const url = this.url;
 
-    if (Meteor.isServer) {
+    if (Meteor.isServer || typeof url.get() !== "string") {
       url.set(src);
     }
 
