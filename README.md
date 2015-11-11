@@ -1,6 +1,6 @@
 # A supersimple image preloader.
 
-This image preloader returns the source of an image when the image is loaded on the client.
+This image preloader returns the source of an image when the image is loaded on the client. The first time you set the source, the source will be returned immediately. After the first time, the will only be updated when the image is loaded on the client.
 This package is designed to remove the annoying blink between images, when you change the source of a background-image.
 
 ## Usage
